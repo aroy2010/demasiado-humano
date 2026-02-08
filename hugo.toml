@@ -1,3 +1,32 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://aroy1962.xyz/"
+languageCode = "es"
+title = "Demasiado humano"
+theme = "hugo-blog-awesome"
+
+[params]
+  description = "Reflexiones, ensayos y actos de arte humano digno de compartir"
+  
+  # Configuración del autor (como objeto)
+  [params.author]
+    name = "Adriel Olórtegui Yzú"
+    avatar = "/images/Avatar_humano.jpg"
+    homepage = "https://aroy1962.xyz/"
+  
+  # Configuración de tema
+  defaultTheme = "dark"
+  disableThemeToggle = false
+  
+[menu]
+  [[menu.main]]
+    name = "Ensayos"
+    url = "/posts/"
+    weight = 1
+  
+  [[menu.main]]
+    name = "Acerca de"
+    url = "/about/"
+    weight = 2
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
