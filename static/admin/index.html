@@ -5,20 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Editor de contenidos – Demasiado humano</title>
   
-  <!-- Decap CMS desde CDN oficial -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- jsDelivr CDN (más confiable que unpkg) -->
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.5.0/dist/decap-cms.js"></script>
 </head>
 <body>
-  <!-- Esperar a que el DOM esté listo -->
   <script>
     window.addEventListener('load', function() {
       console.log('DOM loaded, initializing Decap CMS...');
       
-      // Verificar que Decap CMS se cargó correctamente
       if (typeof CMS !== 'undefined') {
         CMS.init({
           config: {
-            // Configuración inline para pruebas
             backend: {
               name: 'github',
               repo: 'aroy2010/demasiado-humano',
@@ -42,9 +39,9 @@
             }]
           }
         });
-        console.log('Decap CMS initialized successfully');
+        console.log('✅ Decap CMS inicializado correctamente');
       } else {
-        console.error('Decap CMS script failed to load');
+        console.error('❌ Decap CMS no se cargó desde CDN');
       }
     });
   </script>
