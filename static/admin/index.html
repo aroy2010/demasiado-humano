@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <title>Editor de contenidos – Demasiado humano</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Carga de Decap CMS desde CDN -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  </head>
-  <body>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editor de contenidos – Demasiado humano</title>
+  
+  <!-- Decap CMS desde CDN oficial -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</head>
+<body>
+  <!-- Esperar a que el DOM esté listo -->
+  <script>
+    window.addEventListener('load', function() {
+      console.log('DOM loaded, initializing Decap CMS...');
+      
+      // Verificar que Decap CMS se cargó correctamente
+      if (typeof CMS !== 'undefined') {
+        CMS.init({
+          config: {
+            // Configuración inline para pruebas
+            backend: {
+              name: 'github',
+              repo: 'aroy2010/demasiado-humano',
+              branch: 'main'
+            },
+            media_folder: "static/images/uploads",
+            public_folder: "/images/uploads",
+            collections: [{
+              name: 'posts',
+              label: 'Ensayos',
+              folder: 'content/posts',
+              create: true,
+              slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
+              fields: [
+                { label: 'Título', name: 'title', widget: 'string' },
+                { label: 'Fecha', name: 'date', widget: 'datetime' },
+                { label: 'Borrador', name: 'draft', widget: 'boolean', default: true },
+                { label: 'Etiquetas', name: 'tags', widget: 'list' },
+                { label: 'Contenido', name: 'body', widget: 'markdown' }
+              ]
+            }]
+          }
+        });
+        console.log('Decap CMS initialized successfully');
+      } else {
+        console.error('Decap CMS script failed to load');
+      }
+    });
+  </script>
+</body>
 </html>
