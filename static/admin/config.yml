@@ -1,23 +1,41 @@
+site_url: https://aroy1962.xyz
+display_url: https://aroy1962.xyz
+
 backend:
   name: github
   repo: aroy2010/demasiado-humano
   branch: main
-  base_url: https://api.github.com
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
+publish_mode: editorial_workflow
+locale: "es"
+
 collections:
-  - name: "articulos"
-    label: "Artículos Académicos"
+  - name: "posts"
+    label: "Ensayos"
+    label_singular: "Ensayo"
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Fecha", name: "date", widget: "datetime"}
-      - {label: "Autor", name: "author", widget: "string"}
-      - {label: "Categorías", name: "categories", widget: "list"}
-      - {label: "Etiquetas", name: "tags", widget: "list"}
-      - {label: "Borrador", name: "draft", widget: "boolean", default: true}
-      - {label: "Contenido", name: "body", widget: "markdown"}
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Borrador", name: "draft", widget: "boolean", default: true }
+      - { label: "Etiquetas", name: "tags", widget: "list", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Páginas"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    filter:
+      field: "type"
+      value: "page"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Tipo", name: "type", widget: "string", default: "page" }
+      - { label: "Borrador", name: "draft", widget: "boolean", default: true }
+      - { label: "Contenido", name: "body", widget: "markdown" }
