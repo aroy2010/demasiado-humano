@@ -1,6 +1,3 @@
-site_url: https://aroy1962.xyz
-display_url: https://aroy1962.xyz
-
 backend:
   name: github
   repo: aroy2010/demasiado-humano
@@ -9,13 +6,9 @@ backend:
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
-publish_mode: editorial_workflow
-locale: "es"
-
 collections:
   - name: "posts"
     label: "Ensayos"
-    label_singular: "Ensayo"
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -23,7 +16,7 @@ collections:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime" }
       - { label: "Borrador", name: "draft", widget: "boolean", default: true }
-      - { label: "Etiquetas", name: "tags", widget: "list", required: false }
+      - { label: "Etiquetas", name: "tags", widget: "list" }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   - name: "pages"
@@ -31,9 +24,6 @@ collections:
     folder: "content"
     create: true
     slug: "{{slug}}"
-    filter:
-      field: "type"
-      value: "page"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Tipo", name: "type", widget: "string", default: "page" }
