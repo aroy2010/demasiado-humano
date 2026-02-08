@@ -1,32 +1,25 @@
-baseURL = "https://aroy1962.xyz/"
-languageCode = "es"
-title = "Demasiado humano"
-theme = "hugo-blog-awesome"
+baseURL = 'https://aroy1962.xyz'
+languageCode = 'es'
+title = 'Demasiado humano'
+theme = 'ananke'
 
 [params]
-  description = "Reflexiones, ensayos y actos de arte humano digno de compartir"
-  
-  # Configuración del autor (como objeto)
-  [params.author]
-    name = "Adriel Olórtegui Yzú"
-    avatar = "/images/Avatar_humano.jpg"
-    homepage = "https://aroy1962.xyz/"
-  
-  # Configuración de tema
-  defaultTheme = "dark"
-  disableThemeToggle = false
-  
+  author = 'Adriel Olórtegui Yzú'
+  description = 'Reflexiones, ensayos y actos de arte humano digno de compartir'
+  recent_posts_number = 5
+  show_reading_time = true
+  body_classes = 'avenir bg-near-white'
+
 [menu]
   [[menu.main]]
-    name = "Ensayos"
-    url = "/posts/"
-    weight = 1
-  
+    name = 'Inicio'
+    url = '/'
+    weight = 10
   [[menu.main]]
-    name = "Acerca de"
-    url = "/about/"
-    weight = 2
-
-[markup]
-  [markup.highlight]
-    style = "monokai"
+    name = 'Ensayos'
+    url = '/posts/'
+    weight = 20
+  [[menu.main]]
+    name = 'Sobre este proyecto'
+    url = '/about/'
+    weight = 30
