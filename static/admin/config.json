@@ -1,0 +1,25 @@
+{
+  "backend": {
+    "name": "github",
+    "repo": "aroy2010/demasiado-humano",
+    "branch": "main"
+  },
+  "media_folder": "static/images/uploads",
+  "public_folder": "/images/uploads",
+  "collections": [
+    {
+      "name": "posts",
+      "label": "Ensayos",
+      "folder": "content/posts",
+      "create": true,
+      "slug": "{{year}}-{{month}}-{{day}}-{{slug}}",
+      "fields": [
+        { "label": "Título", "name": "title", "widget": "string" },
+        { "label": "Fecha", "name": "date", "widget": "datetime" },
+        { "label": "Borrador", "name": "draft", "widget": "boolean", "default": true },
+        { "label": "Etiquetas", "name": "tags", "widget": "list" },
+        { "label": "Contenido", "name": "body", "widget": "markdown" }
+      ]
+    }
+  ]
+}
