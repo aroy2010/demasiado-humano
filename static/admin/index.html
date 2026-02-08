@@ -4,21 +4,43 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Editor de contenidos – Demasiado humano</title>
-  
-  <!-- Sveltia CMS v2 (sucesor activo de Decap/Netlify CMS) -->
-  <script type="module" src="https://cdn.jsdelivr.net/npm/sveltia-cms@2.20.0/dist/index.js"></script>
+  <!-- Netlify CMS local (sin CDN) -->
+  <script src="/admin/assets/netlify-cms.js"></script>
 </head>
 <body>
-  <script type="module">
-    import { SveltiaCMS } from 'https://cdn.jsdelivr.net/npm/sveltia-cms@2.20.0/dist/index.js';
-    
-    SveltiaCMS.init({
-      configUrl: '/admin/config.yml',
-      // Backend GitHub nativo
-      backend: {
-        name: 'github',
-        repo: 'aroy2010/demasiado-humano',
-        branch: 'main'
+  <script>
+    window.addEventListener('load', function() {
+      console.log('DOM loaded, initializing Netlify CMS local...');
+      
+      if (typeof window.NetlifyCmsApp !== 'undefined') {
+        window.NetlifyCmsApp.init({
+          config: {
+            backend: {
+              name: 'github',
+              repo: 'aroy2010/demasiado-humano',
+              branch: 'main'
+            },
+            media_folder: "static/images/uploads",
+            public_folder: "/images/uploads",
+            collections: [{
+              name: 'posts',
+              label: 'Ensayos',
+              folder: 'content/posts',
+              create: true,
+              slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
+              fields: [
+                { label: 'Título', name: 'title', widget: 'string' },
+                { label: 'Fecha', name: 'date', widget: 'datetime' },
+                { label: 'Borrador', name: 'draft', widget: 'boolean', default: true },
+                { label: 'Etiquetas', name: 'tags', widget: 'list' },
+                { label: 'Contenido', name: 'body', widget: 'markdown' }
+              ]
+            }]
+          }
+        });
+        console.log('✅ Netlify CMS local inicializado correctamente');
+      } else {
+        console.error('❌ Netlify CMS local no encontrado');
       }
     });
   </script>
