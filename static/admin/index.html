@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Editor de contenidos – Demasiado humano</title>
   
-  <!-- jsDelivr CDN (más confiable que unpkg) -->
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.5.0/dist/decap-cms.js"></script>
+  <!-- Netlify CMS v2.10 - VERSION ESTABLE PARA HUGO -->
+  <script src="https://unpkg.com/netlify-cms@2.10.72/dist/netlify-cms.js"></script>
 </head>
 <body>
   <script>
     window.addEventListener('load', function() {
-      console.log('DOM loaded, initializing Decap CMS...');
+      console.log('DOM loaded, initializing Netlify CMS...');
       
-      if (typeof CMS !== 'undefined') {
-        CMS.init({
+      if (typeof window.NetlifyCmsApp !== 'undefined') {
+        window.NetlifyCmsApp.init({
           config: {
             backend: {
               name: 'github',
@@ -39,9 +39,9 @@
             }]
           }
         });
-        console.log('✅ Decap CMS inicializado correctamente');
+        console.log('✅ Netlify CMS inicializado correctamente');
       } else {
-        console.error('❌ Decap CMS no se cargó desde CDN');
+        console.error('❌ Netlify CMS no se cargó desde CDN');
       }
     });
   </script>
