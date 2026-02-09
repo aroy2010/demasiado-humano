@@ -82,3 +82,12 @@ blockquote {
   color: #bdc3c7;
   border-left-color: var(--accent-teal);
 }
+/* Importar fonts profesionales */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+/* Aplicar según proyecto */
+body {
+  font-family: 'Merriweather', Georgia, serif; /* Demasiado Humano */
+  /* O */
+  font-family: 'Inter', -apple-system, sans-serif; /* EPIDIS */
+}

@@ -1,0 +1,32 @@
+baseURL = 'https://aroy1962.xyz'
+languageCode = 'es'
+title = 'Demasiado humano'
+theme = 'PaperMod'
+
+[params]
+  author = 'Adriel Olórtegui Yzú'
+  description = 'Reflexiones, ensayos y actos de arte humano digno de compartir'
+  recent_posts_number = 5
+  show_reading_time = true
+  body_classes = 'avenir bg-near-white'
+
+[menu]
+  [[menu.main]]
+    name = 'Inicio'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    name = 'Ensayos'
+    url = '/posts/'
+    weight = 20
+  [[menu.main]]
+    name = 'Sobre este proyecto'
+    url = '/about/'
+    weight = 30
+[params]
+  assets:
+    disableFingerprinting = false
+    favicon = "/favicon.ico"
+    
+  # Fonts de Google (opcional)
+  customCSS = ["css/extended/custom.css"]
