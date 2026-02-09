@@ -4,12 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Demasiado humano - Editor</title>
-  <link href="https://cdn.jsdelivr.net/npm/@sveltia/cms/dist/sveltia-cms.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sveltia/cms/dist/sveltia-cms.css">
 </head>
 <body>
+  <div id="sveltia-cms"></div>
   <script type="module">
-    import { mount } from 'https://cdn.jsdelivr.net/npm/@sveltia/cms/dist/sveltia-cms.js';
-    mount();
+    import SveltiaCMS from 'https://cdn.jsdelivr.net/npm/@sveltia/cms/dist/sveltia-cms.js';
+    new SveltiaCMS({ target: document.getElementById('sveltia-cms') });
   </script>
 </body>
 </html>
