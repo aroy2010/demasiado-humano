@@ -9,3 +9,6 @@ resources/
 # Archivos temporales
 *~
 .*.swp
+
+# Obsidian
+.obsidian/
