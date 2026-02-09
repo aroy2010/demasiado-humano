@@ -1,0 +1,84 @@
+/* DEMASIADO HUMANO - Paleta Humanista */
+
+:root {
+  --primary-dark: #2c3e50;
+  --accent-blue: #3498db;
+  --accent-teal: #16a085;
+  --text-primary: #2c3e50;
+  --link-color: #2980b9;
+}
+
+/* --- ENCABEZADO --- */
+.header {
+  background-color: var(--primary-dark) !important;
+  border-bottom: 2px solid var(--accent-teal);
+}
+
+.logo, .menu a {
+  color: #ecf0f1 !important;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: var(--accent-blue) !important;
+  transition: color 0.3s ease;
+}
+
+/* --- TIPOGRAFÍA --- */
+body {
+  font-family: 'Georgia', 'Merriweather', serif;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+h1, h2, h3 {
+  color: var(--primary-dark);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* --- ENLACES --- */
+.post-content a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.post-content a:hover {
+  color: var(--accent-blue);
+}
+
+/* --- CITAS DESTACADAS --- */
+blockquote {
+  border-left: 4px solid var(--accent-teal);
+  padding-left: 1.5em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: #555;
+  background-color: #f8f9fa;
+}
+
+/* --- ÉNFASIS ACADÉMICO --- */
+.post-content strong {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.post-content em {
+  color: #34495e;
+}
+
+/* --- MODO OSCURO --- */
+.dark .header {
+  background-color: #1a252f !important;
+}
+
+.dark h1, .dark h2, .dark h3 {
+  color: #ecf0f1;
+}
+
+.dark blockquote {
+  background-color: #2c3e50;
+  color: #bdc3c7;
+  border-left-color: var(--accent-teal);
+}
