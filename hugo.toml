@@ -1,25 +1,71 @@
-baseURL = 'https://aroy1962.xyz'
-languageCode = 'es'
+baseURL = 'https://aroy1962.xyz/'
+languageCode = 'es-PE'
 title = 'Demasiado humano'
-theme = 'ananke'
+theme = 'PaperMod'
 
 [params]
-  author = 'Adriel Olórtegui Yzú'
-  description = 'Reflexiones, ensayos y actos de arte humano digno de compartir'
-  recent_posts_number = 5
-  show_reading_time = true
-  body_classes = 'avenir bg-near-white'
+  author = 'Dr. Adriel Olórtegui Yzú'
+  description = 'Reflexiones sobre la condición humana en tiempos de deshumanización. Ensayos de filosofía, ciencia y cultura desde una perspectiva crítica.'
+  
+  # Configuración PaperMod
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  
+  # Home Info
+  [params.homeInfoParams]
+    Title = "Demasiado humano"
+    Content = """
+**Reflexiones sobre la condición humana en tiempos de deshumanización**
+
+Un espacio para el pensamiento crítico, la reflexión filosófica y el análisis de nuestra época. Ensayos que exploran la intersección entre humanismo, ciencia y cultura contemporánea.
+
+*"Humano, demasiado humano: Un libro para espíritus libres"* — Friedrich Nietzsche
+"""
+
+  # Cover image
+  [params.cover]
+    linkFullImages = true
 
 [menu]
   [[menu.main]]
-    name = 'Inicio'
-    url = '/'
+    identifier = "inicio"
+    name = "Inicio"
+    url = "/"
     weight = 10
+  
   [[menu.main]]
-    name = 'Ensayos'
-    url = '/posts/'
+    identifier = "ensayos"
+    name = "Ensayos"
+    url = "/posts/"
     weight = 20
+  
   [[menu.main]]
-    name = 'Sobre este proyecto'
-    url = '/about/'
+    identifier = "temas"
+    name = "Temas"
+    url = "/tags/"
     weight = 30
+
+# Taxonomías
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Outputs
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Markup
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    noClasses = false
+    style = "monokai"
