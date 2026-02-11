@@ -1,6 +1,8 @@
 # Hugo
 public/
 resources/
+drafts/
+attachments/
 .hugo_build.lock
 
 # macOS
