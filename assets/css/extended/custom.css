@@ -1,11 +1,11 @@
 /* DEMASIADO HUMANO - Paleta Humanista */
 
 :root {
-  --primary-dark: #2c3e50;
+  --primary-dark: #07117b;
   --accent-blue: #3498db;
-  --accent-teal: #16a085;
-  --text-primary: #2c3e50;
-  --link-color: #2980b9;
+  --accent-teal: #ff8256;
+  --text-primary: #5b0870;
+  --link-color: #b9295b;
 }
 
 /* --- ENCABEZADO --- */
@@ -15,7 +15,7 @@
 }
 
 .logo, .menu a {
-  color: #ecf0f1 !important;
+  color: #ecf0f1 !important; 
   font-weight: 500;
 }
 
@@ -70,7 +70,7 @@ blockquote {
 
 /* --- MODO OSCURO --- */
 .dark .header {
-  background-color: #1a252f !important;
+  background-color: #eff4cb !important;
 }
 
 .dark h1, .dark h2, .dark h3 {
