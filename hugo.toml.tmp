@@ -1,26 +1,27 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://aroy1962.xyz/'
 languageCode = 'es-PE'
-title = 'AROY1962'
+title = 'Inquisiciones'
 theme = 'PaperMod'
 
 [params]
-  author = 'Adriel Olórtegui Yzú'
-  description = 'Reflexiones - Disquisiciones - Inquisiciones'
+  author = 'Dr. Adriel Olórtegui Yzú'
+  description = 'Reflexiones sobre la condición humana en tiempos de deshumanización.'
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowWordCount = true
+  disableFingerprinting = false  # ← CRÍTICO
 
 [params.assets]
   disableHLJS = false
-  disableFingerprinting = false  # ← CRÍTICO
 
 [params.homeInfoParams]
-  Title = "AROY1962"
-  Content = "Blog Adriel Olórtegui Yzú"
+  Title = "Inquisiciones"
+  Content = "Reflexiones sobre la condición humana."
 
+[menu.main]  # ← SINTAXIS CORRECTA
   [[menu.main]]
     identifier = "inicio"
     name = "Inicio"
@@ -29,7 +30,7 @@ theme = 'PaperMod'
   [[menu.main]]
     identifier = "lecturas"
     name = "Lecturas"
-    url = "/lecturas/"
+    url = "/posts/"
     weight = 20
   [[menu.main]]
     identifier = "escritos"
@@ -39,15 +40,7 @@ theme = 'PaperMod'
   [[menu.main]]
     identifier = "acerca"
     name = "Acerca de"
-    url = "/posts/"
+    url = "/acerca/"
     weight = 40
 
-[markup]
-  [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = true
-    lineNos = true
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+# ... resto de tu config

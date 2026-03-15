@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ .LanguageCode | default "en" }}" dir="{{ .LanguageCode | default "en" | printf "%s" | lower }}">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body class="{{ block "body_classes" . }}{{ .Scratch.Get "body_classes" }}{{ end }}">
+    {{ partial "header.html" . }}
+    <main id="content" class="{{ block "main_classes" . }}{{ .Scratch.Get "main_classes" }}{{ end }}">
+        {{ block "main" . }}
+            {{ .Content }}
+        {{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    {{ block "footer_js" . }}{{ partial "footer_js.html" . }}{{ end }}
+</body>
+</html>

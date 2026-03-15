@@ -1,7 +1,0 @@
-/* INQUISICIONES - LEGIBLE CLARO/OSCuro */
-.header .logo, .header .menu a { color: #facc15 !important; font-variant: small-caps; }
-body:not(.dark) { background: #ffffff !important; color: #222222 !important; }
-body:not(.dark) h1, body:not(.dark) h2, body:not(.dark) h3 { color: #07117b !important; }
-body.dark { background: #020617 !important; color: #e5e7eb !important; }
-body.dark h1, body.dark h2, body.dark h3 { color: #e5e7eb !important; }
-body.dark .post-card-title a { color: #e5e7eb !important; }
