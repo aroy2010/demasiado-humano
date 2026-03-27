@@ -3,7 +3,7 @@ id: 202603261236
 aliases:
   - Ambientación Mañana las ratas
 titulo: Ambientación Mañana las ratas
-tipo:
+tipo: Reflexión al leer
 estado: 🌱 semilla
 creado: 2026-03-26 12:36
 actualizado: 2026-03-26 12:36
@@ -12,7 +12,7 @@ tags:
   - "#futuro"
   - distopía
   - humanismo
-fuente:
+fuente: Mañana las Ratas
 ---
 
 # 💡 Ambientación Mañana las ratas
