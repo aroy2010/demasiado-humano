@@ -18,13 +18,18 @@ fuente: Personal
 
 # 💡 ¿Cómo votaré?
 
-### 🧪 La Idea en Crudo
+### 🧪 Criterios para definir mi voto
 <% tp.file.cursor() %>
 
-
+Los criterios que aplicaré son los siguientes:
+1. ¿Por qué considero importante realizar este esfuerzo?
+	- La amenaza de que vuelvan los mismos.
+2. Por estos No = ¿Por qué?
+3. De los que quedan ¿Qué criterios aplico?
 
 ---
 
 ### 🚀 Siguientes Pasos
 - [ ] Procesar a Nota Atómica.
 - [ ] Eliminar nota temporal.
+- [ ] Buscar sustento a las preguntas establecidas.
