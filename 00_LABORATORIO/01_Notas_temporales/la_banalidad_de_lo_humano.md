@@ -31,7 +31,33 @@ Sus reflexiones ampliaron el horizonte y se preguntó ¿Cómo millones de person
 
 Revisó entonces que había ocurrido en el proceso de ascenso del nazismo y de llevar a cabo dicho exterminio, dentro de la guerra que libraba Alemania (evidentemente el Holocausto distraía y consumía recursos que Alemania necesitaba para su guerra) y entendió que observar comportamientos como el de Eichmann, respondía a un proceso y a ese proceso lo denominó *"la banalidad del mal"*.
 
-¿Cuál es el proceso para que aparezca la banalidad del mal?
+Arendt comprendió que el acompañamiento activo y el respaldo de Eichmann y muchos otros alemanes al planteamiento de Hitler (y sus convencidos allegados), de exterminar a los judíos, era consecuencia de un proceso de culturización al que fue expuesto -de manera muy efectiva- el pueblo alemán, condicionó su accionar y logró una participación activa de la gran mayoría de los alemanes, en el desprecio y luego, necesidad de matar, exterminar a los judíos.
+
+¿Cómo funciona entonces la implantación de *"la banalidad"*?
+
+Haciendo la salvedad que la banalidad es una herramienta de manipulación política, que apela al espacio ético y moral de las personas, de manera tal que traslapan principios y valores hacia fines convenientes para los políticos dominantes.
+
+Pero volviendo a la implantación de la banalidad, los pasos o elementos que emplea son, con pequeñas o amplias diferencias, las siguientes:
+
+- Responsabilizan a un grupo de personas (según raza, país, cultura, etc.) de los males o problemas que padecen.
+- Invocan un enemigo o convierten a un grupo humano como tal.
+- Crean amenazas.
+- Difunden que las acciones que aplicarán contra el grupo humano "enemigo", son por seguridad, justicia y/o reinvidicaciones que les fueron arrebatadas por los "culpables".
+- Proceden a descalificar, desvalorizar, incluso deshumanizar al grupo que atacarán para volver a ser lo que perdieron por culpa de ellos.
+- Como consecuencia del punto anterior, generan leyes que les permiten "legalizar" los atropellos que cometerán.
+- Todo lo anterior, lo orientan o enmarcan en el logro de fines superiores, como espacio vital, seguridad nacional, soberanía, crecimiento, desarrollo, etc. Siempre plantearán un fin superior.
+
+No entraré en detallar casos específicos en este post (lo haré más adelante), pero si los invito a que piensen en casos históricos y actuales. Piensen (o busquen información) en como actuaron y están actuando muchos líderes que se reivindican como "salvadores"; como por ejemplo: Trump, Netanyahu, Hitler, Chávez, Fujimori; verán que hicieron uso de más de una de las estrategias que he descrito.
+
+### Consecuencias de la banalidad
+
+- Guerras y exterminio
+- Genocidio y destrucción
+- Pérdida de derechos y de un orden legal para la convivencia.
+
+Poco a poco ilustraré con historia y conceptos que esto es lo que ocurre.
+
+
 
 ---
 
