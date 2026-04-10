@@ -1,0 +1,88 @@
+/* Color diferente para la barra superior */
+.header {
+    background: #2e2e33; /* Color oscuro profesional, cámbialo a tu gusto */
+    transition: transform 0.3s ease-in-out;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Clase para ocultar el menú al bajar */
+.header-hidden {
+    transform: translateY(-100%);
+}
+
+/* Ajuste de color de los links del menú para que contrasten */
+.menu a {
+    color: #ffffff !important;
+}
+
+.profile_inner {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/images/fondo-biblioteca.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.profile_inner h1, .profile_inner .subtitle {
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.profile_inner {
+    /* Forzar ancho total y centrado absoluto */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    
+    /* Flexbox para centrar el contenido interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+
+    /* Estética */
+    padding: 100px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Ajuste para que los botones también se centren */
+.profile_inner .social-icons, .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.profile_inner {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("/images/tu-fondo-literario.jpg");
+    /* El linear-gradient oscurece la imagen para que el texto blanco resalte */
+}
+
+.profile_inner h1 {
+    animation: fadeInDown 1.2s ease-out;
+}
+
+.profile_inner .subtitle {
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

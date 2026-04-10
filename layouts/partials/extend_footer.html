@@ -1,0 +1,15 @@
+<script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Bajando - Ocultar
+            header.style.top = "-80px"; 
+        } else {
+            // Subiendo - Mostrar
+            header.style.top = "0";
+        }
+        lastScrollTop = scrollTop;
+    });
+</script>

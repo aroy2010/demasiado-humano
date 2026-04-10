@@ -12,6 +12,7 @@ theme = 'PaperMod'
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowWordCount = true
+  stickyHeader = false
 
 [params.assets]
   disableHLJS = false
@@ -51,3 +52,19 @@ theme = 'PaperMod'
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[params.profileMode]
+    enabled = true
+    title = "AROY1962: Medicina, Letras y Sentido"
+    subtitle = "Explorando la intersección entre el arte de curar y el oficio de escribir."
+    imageUrl = "images/tu-banner-hero.jpg" # Ubicada en static/images/
+    imageWidth = 150
+    imageHeight = 150
+    imageTitle = "Logo AROY1962"
+    
+    [[params.profileMode.buttons]]
+        name = "📖 Empezar a leer"
+        url = "posts/"
+    [[params.profileMode.buttons]]
+        name = "✍️ Sobre mí"
+        url = "about/"
