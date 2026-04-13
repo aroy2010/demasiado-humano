@@ -1,17 +1,5 @@
 ---
 title: La banalidad de lo humano
-date: 2026-04-09T20:05:45-05:00
-draft: false
-author: AROY1962
-description:
-tags:
-  - humanismo
-  - distopía
-  - reflexión
-  - tiempos-modernos
-categories: []
-showToc: false
-TocOpen: false
 ---
 ## 🧪 La Idea en Crudo
 
@@ -62,5 +50,7 @@ Poco a poco ilustraré con historia y conceptos que esto es lo que ocurre.
 ---
 
 ### 🚀 Siguientes Pasos
-- [ ] Procesar a Nota Atómica.
-- [ ] Eliminar nota temporal.
+
+- Procesar a Nota Atómica.
+- Eliminar nota temporal.
+
