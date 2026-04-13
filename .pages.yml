@@ -3,6 +3,8 @@ content:
     label: 🖋️ Mis Publicaciones
     folder: content/posts
     type: collection
+    exclude: ["_index.md"] 
+    identifier: title
     fields:
       - name: title
         label: Título del Post
