@@ -1,34 +1,26 @@
-<%*
-// 1. Definición del Título Humano
-let title = await tp.system.prompt("Título del Ensayo (Creativo)");
-if (!title) { title = tp.file.title; }
-
-// 2. Normalización snake_case para la URL de Hugo
-let fileName = title.toLowerCase()
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-    .replace(/ /g, "_")
-    .replace(/[^a-z0-9_]/g, "");
-
-await tp.file.rename(fileName);
-_%>
 ---
-# --- Metadatos de Publicación (Hugo/PaperMod) ---
-title: "<% title %>"
-date: <% tp.date.now("YYYY-MM-DDTHH:mm:ssZ") %>
+title: El maquiavélico escenario electoral del Perú
+date: 2026-04-11T10:45:04-05:00
 draft: true
-author: "AROY1962"
-description: "" 
-categories: ["Ensayos"]
-tags: [ensayo]
+author: AROY1962
+description: Reflexiones sobre lo que se nos viene en estas elecciones 2026 - Perú
+categories:
+  - Ensayos
+tags:
+  - ensayo
+  - elecciones
+  - Perú
+  - política
+  - futuro
 showToc: true
-# --- Gestión Interna (Zettelkasten) ---
-id: <% tp.file.creation_date("YYYYMMDDHHmm") %>
-aliases: ["<% title %>"]
+id: 202604111044
+aliases:
+  - El maquiavélico escenario electoral del Perú
 estado: 🌳 provisional
-creado: <% tp.file.creation_date("YYYY-MM-DD HH:mm") %>
+creado: 2026-04-11 10:44
 ---
 
-# <% title %>
+# El maquiavélico escenario electoral del Perú
 
 ### 🧠 Punto de partida
 *(Reflexión, lectura o caso clínico que detona este ensayo).*
