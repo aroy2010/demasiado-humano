@@ -1,31 +1,14 @@
+media:
+  input: static/images
+  output: /images
 content:
   - name: posts
     label: 🖋️ Mis Publicaciones
-    folder: content/posts
     type: collection
-    exclude: ["_index.md"] 
-    identifier: title
+    path: content/posts
+    exclude: ["_index.md"]
     fields:
       - name: title
-        label: Título del Post
-        widget: string
-      - name: date
-        label: Fecha de Publicación
-        widget: datetime
-      - name: draft
-        label: ¿Es Borrador?
-        widget: boolean
-        default: true
-      - name: description
-        label: Resumen (SEO)
-        widget: text
-      - name: image
-        label: Imagen de Portada (Hero)
-        widget: image
-        # Esto ayudará a que el CMS busque por defecto en tu carpeta de imágenes
-        options:
-          path: static/images
-        description: "Sube aquí la imagen que Blowfish usará como fondo."
+        type: string
       - name: body
-        label: Cuerpo del texto
-        widget: markdown
+        type: rich-text
