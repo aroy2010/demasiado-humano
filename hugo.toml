@@ -1,10 +1,9 @@
 baseURL = 'http://localhost:1313/'
 languageCode = 'es-PE'
 title = 'AROY1962'
-theme = 'PaperMod'
+theme = 'blowfish'
 
 [params]
-  author = 'Adriel Olórtegui Yzú'
   description = 'Reflexiones - Disquisiciones - Inquisiciones'
   ShowReadingTime = true
   ShowShareButtons = true
@@ -13,6 +12,11 @@ theme = 'PaperMod'
   ShowCodeCopyButtons = true
   ShowWordCount = true
   stickyHeader = false
+
+[params.author]
+  headline = 'Médico y Escritor'
+  bio = 'Reflexiones - Disquisiciones - Inquisiciones'
+  # image = 'images/tu-foto.jpg' # Opcional: coloca una foto en static/images/
 
 [params.assets]
   disableHLJS = false

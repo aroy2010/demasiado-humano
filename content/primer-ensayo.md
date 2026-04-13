@@ -1,8 +1,11 @@
 ---
-title: "Primer ensayo"
+title: La paradoja contemporánea
 date: 2026-02-08T12:44:00-05:00
 draft: false
-tags: ["reflexión", "humanismo"]
+tags:
+  - reflexión
+  - humanismo
+description: La paradoja de la era moderna
 ---
 
 Este es un espacio para reflexionar sobre la condición humana en tiempos de deshumanización tecnológica.

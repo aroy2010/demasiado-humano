@@ -1,6 +1,7 @@
 ---
-title: 
-date: 
+title: Proyecto Humano
+description: Inicio de este proyecto
+date:
 draft: true
 tags: []
 ---
