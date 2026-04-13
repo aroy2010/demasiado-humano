@@ -1,0 +1,24 @@
+# .pagescms.yml
+content:
+  - name: posts
+    label: 🖋️ Mis Publicaciones
+    folder: content/posts
+    type: collection
+    identifier: name # Usamos el nombre del archivo, que NUNCA es undefined
+    extension: md
+    exclude: ["_index.md", ".DS_Store"]
+    fields:
+      - name: title
+        label: Título del Post
+        widget: string
+        required: true
+      - name: date
+        label: Fecha de Publicación
+        widget: datetime
+      - name: draft
+        label: ¿Es Borrador?
+        widget: boolean
+        default: true
+      - name: body
+        label: Cuerpo del texto
+        widget: markdown
