@@ -1,4 +1,4 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://aroy1962.xyz/'
 languageCode = 'es-PE'
 title = 'AROY1962'
 theme = 'blowfish'
@@ -14,7 +14,7 @@ theme = 'blowfish'
   stickyHeader = false
 
 [params.author]
-  headline = 'Médico y Escritor'
+  headline = 'Sobre el transcurrir'
   bio = 'Reflexiones - Disquisiciones - Inquisiciones'
   # image = 'images/tu-foto.jpg' # Opcional: coloca una foto en static/images/
 
@@ -28,24 +28,29 @@ theme = 'blowfish'
 
   [[menu.main]]
     identifier = "inicio"
-    name = "Inicio"
+    name = "Principio"
     url = "/"
     weight = 10
   [[menu.main]]
-    identifier = "lecturas"
-    name = "Lecturas"
+    identifier = "creacion"
+    name = "Creación"
     url = "/lecturas/"
     weight = 20
   [[menu.main]]
     identifier = "escritos"
-    name = "Escritura Creativa"
+    name = "Ensayando"
     url = "/escritos_creativos/"
     weight = 30
+  [[menu.main]]
+    identifier = "resena"
+    name = "Reseñas"
+    url = "/resenas/"
+    weight = 40
   [[menu.main]]
     identifier = "acerca"
     name = "Acerca de"
     url = "/posts/"
-    weight = 40
+    weight = 50
 
 [markup]
   [markup.highlight]
