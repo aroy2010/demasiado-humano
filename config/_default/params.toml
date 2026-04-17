@@ -1,0 +1,13 @@
+colorScheme = "noir"
+enableSearch = true
+enableStructuredBreadcrumbs = true
+enableStyledScrollbar = true
+defaultBackgroundImage = "Hojanaranja.png"
+smartTOC = ""
+autoSwitchAppearance = "autoSwitchAppearance"
+
+[homepage]
+layout = "hero, card, background"
+showRecentItems = "6"
+showMoreLinkDest = ""
+cardView = "cardView"

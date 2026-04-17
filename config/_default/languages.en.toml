@@ -5,3 +5,17 @@ languageCode = "es-PE"
 contentDir = "content"
 languageName = "Español"
 weight = 1
+
+[params]
+description = "Reflexiones, meditaciones, inquisiciones y disquisiciones sobre existir."
+copyright = "Derechos reservados: Adriel Olórtegui Yzú - 2026"
+displayName = "ES"
+isoCode = "es"
+dateFormat = ""
+
+[[params.author.links]]
+email = "adrielolorteguiyzu@gmail.com"
+
+["params.author"]
+name = "Adriel Olórtegui Yzú"
+email = "adrielolorteguiyzu@gmail.com"

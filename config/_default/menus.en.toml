@@ -1,0 +1,41 @@
+[[main]]
+none = "none"
+
+[[main]]
+name = "Acerca de"
+pageRef = "acerca"
+identifier = "wsrCnwTNk3"
+weight = 6
+
+[[main]]
+name = "Reseña"
+pageRef = "resena"
+identifier = "sX6ElJHStx"
+weight = 5
+
+[[main]]
+name = "Lecturas"
+pageRef = "lecturas"
+identifier = "gfPb40Z0yU"
+weight = 4
+
+[[main]]
+name = "Ensayos"
+pageRef = "escritos_creativos"
+identifier = "c7Tk5YhlX2"
+weight = 3
+
+[[main]]
+name = "Reflexiones"
+pageRef = "posts"
+identifier = "26x6nrw4SN"
+weight = 2
+
+[[main]]
+name = "Principio"
+pageRef = "content"
+identifier = "zAHnVjLgxc"
+weight = 1
+
+[[footer]]
+none = "none"
