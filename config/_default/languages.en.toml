@@ -1,0 +1,7 @@
+title = "El Blog de Adriel"
+
+[en]
+languageCode = "es-PE"
+contentDir = "content"
+languageName = "Español"
+weight = 1
