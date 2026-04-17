@@ -5,27 +5,27 @@ theme = 'blowfish'
 
 [params]
   description = 'Reflexiones - Disquisiciones - Inquisiciones'
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  stickyHeader = false
+  # Esto ayuda a que el diseño no se rompa
+  mainSections = ["posts", "lecturas", "escritos_creativos", "resenas"]
 
 [params.author]
-  headline = 'Sobre el transcurrir'
-  bio = 'Reflexiones - Disquisiciones - Inquisiciones'
-  # image = 'images/tu-foto.jpg' # Opcional: coloca una foto en static/images/
+  name = "El Blog de Adriel"
+  # En el autor, el headline suele ser una sola línea corta
+  # headline = "Medicina, Letras y Sentido"
+  # image = "images/Hojanaranja.png"
 
-[params.assets]
-  disableHLJS = false
-  disableFingerprinting = false  # ← CRÍTICO
+[params.homepage]
+  layout = "background"
+  image = "images/Hojanaranja.png"
+  imageSize = "cover"
+  showHerald = false
+  title = "AROY1962"
+  tagline = """
+  Sobre el transcurrir de los días...  \n y la búsqueda de sentido en las letras.
+  """ # 👈 Tus dos líneas con el salto
+  showNews = true # Para que tus artículos aparezcan debajo del encabezado
 
-[params.homeInfoParams]
-  Title = "AROY1962"
-  Content = "Blog Adriel Olórtegui Yzú"
-
+[menu]
   [[menu.main]]
     identifier = "inicio"
     name = "Principio"
@@ -46,7 +46,7 @@ theme = 'blowfish'
     name = "Reseñas"
     url = "/resenas/"
     weight = 40
-  [[menu.main]]
+[[menu.main]]
     identifier = "acerca"
     name = "Acerca de"
     url = "/posts/"
@@ -61,19 +61,3 @@ theme = 'blowfish'
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
-
-[params.profileMode]
-    enabled = true
-    title = "AROY1962: Medicina, Letras y Sentido"
-    subtitle = "Explorando la intersección entre el arte de curar y el oficio de escribir."
-    imageUrl = "images/tu-banner-hero.jpg" # Ubicada en static/images/
-    imageWidth = 150
-    imageHeight = 150
-    imageTitle = "Logo AROY1962"
-    
-    [[params.profileMode.buttons]]
-        name = "📖 Empezar a leer"
-        url = "posts/"
-    [[params.profileMode.buttons]]
-        name = "✍️ Sobre mí"
-        url = "about/"
