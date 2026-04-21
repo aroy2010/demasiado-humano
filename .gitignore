@@ -1,22 +1,18 @@
-# Hugo
-public/
-resources/
-drafts/
-attachments/
+# Carpetas de Hugo
+/public/
+/resources/
+/_vendor/
+/node_modules/
 .hugo_build.lock
 
-# macOS
+# Archivos de sistema
 .DS_Store
 
-# Archivos temporales
-*~
-.*.swp
-
-# Obsidian
+# Carpetas de Obsidian (Configuración y Plugins)
 .obsidian/
+.smart-env/
+**/ .obsidian/
+**/ .smart-env/
 
-
-
-
-# Ignore Smart Environment folder
-.smart-env
+# Archivos temporales de Obsidian
+*.sync-conflict-*
