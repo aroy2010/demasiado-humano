@@ -1,141 +1,320 @@
-/* 1. Estilo del nombre del blog en el menú superior */
-.navbar a[href="/"],
-.nav-brand,
-a.text-2xl.font-bold,
-[id="nav-brand"],
-.navbar-brand {
-  font-variant: small-caps !important;
-  text-transform: lowercase !important;
-  font-size: 1.6rem !important;
-  color: #1e3a8a !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.5px !important;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+:root {
+    --sn-bg: #F4F7F0;
+    --sn-text: #3A3A33;
+    --sn-accent: #6B7F4C;
+    --sn-border: #D4DDC7;
+    --sn-card-bg: #F4F7F0;
+    --sn-h1: #4A5D3A;
+    --sn-h2: #4A433B;
+    --sn-h3: #5C554A;
+    --sn-header-scrolled-bg: rgba(244, 247, 240, 0.85);
 }
 
-.dark .navbar a[href="/"],
-.dark .nav-brand,
-.dark a.text-2xl.font-bold,
-.dark [id="nav-brand"],
-.dark .navbar-brand {
-  color: #f59e0b !important;
+:root.dark,
+html.dark,
+body.dark,
+[data-theme="dark"] {
+    --sn-bg: #1E2A1E;
+    --sn-card-bg: #253025;
+    --sn-text: #E0E2D8;
+    --sn-accent: #B0C084;
+    --sn-h1: #C5D1A5;
+    --sn-h2: #BDC9A0;
+    --sn-h3: #B0B890;
+    --sn-border: #3A4635;
+    --sn-header-scrolled-bg: rgba(30, 42, 30, 0.85);
 }
 
-/* 2. Línea delgada y tenue en el borde inferior del menú superior */
-header,
-.navbar {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+html,
+body {
+    background: var(--sn-bg);
+    color: var(--sn-text);
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
-.dark header,
-.dark .navbar {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+a,
+.prose a {
+    color: var(--sn-accent);
 }
 
-/* 3. Forzar visibilidad del botón de cambio de tema */
-#theme-toggle,
-#theme-toggle-mobile,
-.theme-toggle,
-button[title*="theme"],
-button[id*="theme"] {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+a:hover,
+.prose a:hover {
+    color: color-mix(in srgb, var(--sn-accent) 85%, #000 15%);
 }
 
-#theme-toggle svg,
-#theme-toggle-mobile svg {
-  display: block !important;
-  width: 1.4rem !important;
-  height: 1.4rem !important;
-  color: currentColor !important;
+h1,
+h2,
+h3,
+.prose h1,
+.prose h2,
+.prose h3 {
+    font-family: "Lato", sans-serif;
 }
 
-/* 4. Diseño estético de tarjetas (layout de posts) */
-@media (min-width: 1024px) {
+h1,
+.prose h1 {
+    color: var(--sn-h1);
+    font-size: 25px;
+    line-height: 1.3;
+}
 
-  main .grid,
-  .homepage-recent-posts {
+h2,
+.prose h2 {
+    color: var(--sn-h2);
+    font-size: 22px;
+    line-height: 1.35;
+}
+
+h3,
+.prose h3 {
+    color: var(--sn-h3);
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Top navigation (Blowfish default header) */
+.main-menu,
+nav.flex.items-center.gap-x-5.h-12 {
+    font-family: "Lato", sans-serif;
+}
+
+.main-menu {
+    border-bottom: 1px solid rgba(107, 127, 76, 0.25);
+}
+
+/* Site title in small-caps (not uppercase transform) */
+.main-menu>a.text-base.font-medium.truncate.min-w-0.shrink {
+    font-variant: small-caps !important;
+    font-variant-caps: all-small-caps !important;
+    text-transform: none !important;
+    letter-spacing: 0.4px;
+    color: var(--sn-accent) !important;
+    font-size: 1.2rem !important;
+    font-weight: 700;
+}
+
+.dark .main-menu>a.text-base.font-medium.truncate.min-w-0.shrink {
+    color: var(--sn-accent) !important;
+}
+
+/* Reduce top menu items by ~1.5pt */
+nav.flex.items-center.gap-x-5.h-12 a span.text-base.font-medium.break-normal,
+nav.flex.items-center.gap-x-5.h-12 a span.text-bg.font-bg.break-normal {
+    color: var(--sn-text) !important;
+    font-size: 0.875rem !important;
+}
+
+/* Appearance switcher buttons (desktop + mobile) */
+#appearance-switcher,
+#appearance-switcher-mobile {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: var(--sn-accent);
+}
+
+.dark #appearance-switcher,
+.dark #appearance-switcher-mobile {
+    color: var(--sn-accent);
+}
+
+#appearance-switcher svg,
+#appearance-switcher-mobile svg {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+/* Hero text readability */
+article.max-w-full.prose.dark\:prose-invert {
+    color: var(--sn-text);
+}
+
+article.max-w-full.prose.dark\:prose-invert h1,
+article.max-w-full.prose.dark\:prose-invert h2,
+article.max-w-full.prose.dark\:prose-invert section.prose {
+    font-family: "Lato", sans-serif;
+}
+
+/* Recent posts grid: 3 columns, centered, same max width as hero (max-w-7xl) */
+main>section>div.relative.w-screen {
+    width: 100% !important;
+    max-width: 80rem !important;
+    margin: 0 auto !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    inset-inline-start: auto !important;
+}
+
+main>section>div.relative.w-screen>section.w-full.grid {
     display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 2rem !important;
-    justify-content: center !important;
-  }
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
 }
 
-article,
-.card {
-  border: 1px solid rgba(0, 0, 0, 0.05) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
-  padding: 1.5rem !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-  background-color: var(--background-color, #ffffff);
+@media (min-width: 768px) {
+    main>section>div.relative.w-screen>section.w-full.grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
 }
 
-article:hover,
-.card:hover {
-  transform: translateY(-5px) !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+@media (min-width: 1024px) {
+    main>section>div.relative.w-screen>section.w-full.grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
 }
 
-/* 5. Estilos para los títulos de las tarjetas */
-article h2,
-article h3,
-.card-title {
-  color: #1e3a8a !important;
-  font-family: Georgia, serif !important;
-  margin-bottom: 0.5rem !important;
+/* Cards blend with site background */
+.article-link--card {
+    background: var(--sn-card-bg) !important;
+    border: 1px solid var(--sn-border) !important;
+    box-shadow: 0 2px 8px rgba(58, 58, 51, 0.06) !important;
 }
 
-.dark article h2,
-.dark article h3 {
-  color: #60a5fa !important;
+.article-link--card:hover {
+    box-shadow: 0 8px 20px rgba(58, 58, 51, 0.1) !important;
+    border-color: rgba(107, 127, 76, 0.45) !important;
 }
 
-#theme-toggle.hidden,
-#theme-toggle-mobile.hidden,
-.theme-toggle.hidden,
-.theme-toggle-button.hidden,
-button[title*="theme"].hidden,
-button[id*="theme"].hidden {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+.article-link--card h2,
+.article-link--card h2 a,
+.article-link--card .text-neutral-800 {
+    color: var(--sn-h1) !important;
 }
 
-#theme-toggle[hidden],
-#theme-toggle-mobile[hidden],
-.theme-toggle[hidden],
-.theme-toggle-button[hidden],
-button[title*="theme"][hidden],
-button[id*="theme"][hidden] {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+/* Sticky header shrink on scroll (adjustable X/Y heights) */
+:root {
+    --header-height-expanded: 56px;
+    --header-height-collapsed: 48px;
 }
 
-#theme-toggle svg,
-#theme-toggle-mobile svg {
-  display: block !important;
-  width: 1.4rem !important;
-  height: 1.4rem !important;
-  color: currentColor !important;
+div.fixed.inset-x-0.z-100 {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 2. Forzar la aparición del icono de cambio de tema (Claro/Oscuro) */
-button#theme-toggle,
-button#theme-toggle-mobile,
-.theme-toggle,
-button[title*="theme"] {
-  display: flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+#menu-blur {
+    transition: opacity 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
-button#theme-toggle svg,
-button#theme-toggle-mobile svg {
-  display: block !important;
-  width: 1.4rem !important;
-  height: 1.4rem !important;
-  color: currentColor !important;
+.main-menu {
+    min-height: var(--header-height-expanded);
+    transition: min-height 0.3s ease, padding 0.3s ease;
+}
+
+.main-menu nav.flex.items-center.gap-x-5.h-12,
+.main-menu .flex.items-center.h-14.gap-4 {
+    height: var(--header-height-expanded) !important;
+    transition: height 0.3s ease;
+}
+
+div.fixed.inset-x-0.z-100.header-condensed {
+    background-color: var(--sn-header-scrolled-bg);
+    box-shadow: 0 2px 12px rgba(58, 58, 51, 0.08);
+}
+
+div.fixed.inset-x-0.z-100.header-condensed #menu-blur {
+    opacity: 1 !important;
+    background: var(--sn-header-scrolled-bg) !important;
+}
+
+div.fixed.inset-x-0.z-100.header-condensed .main-menu {
+    min-height: var(--header-height-collapsed);
+}
+
+div.fixed.inset-x-0.z-100.header-condensed .main-menu nav.flex.items-center.gap-x-5.h-12,
+div.fixed.inset-x-0.z-100.header-condensed .main-menu .flex.items-center.h-14.gap-4 {
+    height: var(--header-height-collapsed) !important;
+}
+
+/* Dark theme readability and component contrast */
+html.dark,
+html.dark body,
+[data-theme="dark"],
+[data-theme="dark"] body {
+    background: var(--sn-bg) !important;
+    color: var(--sn-text) !important;
+}
+
+html.dark .main-menu,
+[data-theme="dark"] .main-menu {
+    border-bottom-color: var(--sn-border) !important;
+}
+
+html.dark nav.flex.items-center.gap-x-5.h-12 a,
+html.dark nav.flex.items-center.gap-x-5.h-12 span,
+[data-theme="dark"] nav.flex.items-center.gap-x-5.h-12 a,
+[data-theme="dark"] nav.flex.items-center.gap-x-5.h-12 span {
+    color: var(--sn-text) !important;
+}
+
+html.dark .main-menu>a.text-base.font-medium.truncate.min-w-0.shrink,
+[data-theme="dark"] .main-menu>a.text-base.font-medium.truncate.min-w-0.shrink {
+    color: var(--sn-accent) !important;
+}
+
+html.dark article,
+html.dark .card,
+html.dark .article-link--card,
+[data-theme="dark"] article,
+[data-theme="dark"] .card,
+[data-theme="dark"] .article-link--card {
+    background: var(--sn-card-bg) !important;
+    border-color: var(--sn-border) !important;
+}
+
+html.dark :where(h1, .prose h1),
+[data-theme="dark"] :where(h1, .prose h1) {
+    color: var(--sn-h1) !important;
+}
+
+html.dark :where(h2, .prose h2),
+[data-theme="dark"] :where(h2, .prose h2) {
+    color: var(--sn-h2) !important;
+}
+
+html.dark :where(h3, .prose h3),
+[data-theme="dark"] :where(h3, .prose h3) {
+    color: var(--sn-h3) !important;
+}
+
+html.dark .prose,
+[data-theme="dark"] .prose {
+    color: var(--sn-text) !important;
+}
+
+/* Single post content spacing and surface */
+#single_header,
+.article-content.max-w-prose {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.article-content.max-w-prose {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: var(--sn-bg) !important;
+    border: 1px solid color-mix(in srgb, var(--sn-border) 85%, transparent);
+    box-shadow: 0 4px 14px rgba(58, 58, 51, 0.05);
+    border-radius: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+
+    #single_header,
+    .article-content.max-w-prose {
+        margin-left: 1.25rem;
+        margin-right: 1.25rem;
+    }
+
+    .article-content.max-w-prose {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        padding: 1.25rem;
+    }
 }

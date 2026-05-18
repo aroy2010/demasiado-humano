@@ -1,7 +1,7 @@
 ---
 title: Proyecto Humano
 description: Inicio de este proyecto
-date:
+date: 2026-02-09
 draft: true
 tags: []
 ---
