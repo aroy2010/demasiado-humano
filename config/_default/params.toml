@@ -1,13 +1,61 @@
-colorScheme = "noir"
+colorScheme = "blowfish"
+disableThemeToggle = false
 enableSearch = true
 enableStructuredBreadcrumbs = true
 enableStyledScrollbar = true
 defaultBackgroundImage = "Hojanaranja.png"
 smartTOC = ""
 autoSwitchAppearance = "autoSwitchAppearance"
+defaultAppearance = "dark"
+replyByEmail = false
+enableCodeCopy = true
+highlightCurrentMenuArea = true
+disableImageZoom = ""
+imagePosition = ""
+showViews = true
+showLikes = true
+robots = "index"
+
+[appearance]
+colorScheme = "blowfish"
+disableThemeToggle = false
+defaultTheme = "system"
 
 [homepage]
-layout = "hero, card, background"
+layout = "hero"
 showRecentItems = "6"
 showMoreLinkDest = ""
-cardView = "cardView"
+cardView = true
+showRecent = true
+showMoreLink = true
+cardViewScreenWidth = 1024
+layoutBackgroundBlur = false
+disableHeroImageFilter = false
+homepageImage = "camino_futuro.png"
+
+[header]
+layout = "fixed-fill-blur"
+
+[footer]
+showCopyright = ""
+showMenu = ""
+showThemeAttribution = ""
+showAppearanceSwitcher = ""
+
+[article]
+showDate = true
+showDateUpdated = true
+showAuthor = ""
+showAuthorBottom = false
+layoutBackgroundHeaderSpace = ""
+showBreadcrumbs = true
+showEdit = ""
+showPagination = true
+showReadingTime = true
+relatedContentLimit = 3
+showRelatedContent = "true"
+showComments = false
+externalLinkForceNewTab = true
+
+[list]
+layoutBackgroundBlur = ""

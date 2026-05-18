@@ -1,6 +1,4 @@
 title = "El Blog de Adriel"
-
-[en]
 languageCode = "es-PE"
 contentDir = "content"
 languageName = "Español"
@@ -11,11 +9,12 @@ description = "Reflexiones, meditaciones, inquisiciones y disquisiciones sobre e
 copyright = "Derechos reservados: Adriel Olórtegui Yzú - 2026"
 displayName = "ES"
 isoCode = "es"
-dateFormat = ""
+dateFormat = "2 Enero del 2006"
 
-[[params.author.links]]
-email = "adrielolorteguiyzu@gmail.com"
-
-["params.author"]
+[params.author]
 name = "Adriel Olórtegui Yzú"
-email = "adrielolorteguiyzu@gmail.com"
+email = "blank"
+headline = ""
+links = [
+	{ email = "adrielolorteguiyzu@gmail.com" },
+]

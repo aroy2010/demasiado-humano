@@ -8,13 +8,13 @@ identifier = "wsrCnwTNk3"
 weight = 6
 
 [[main]]
-name = "Reseña"
+name = "Reseñas"
 pageRef = "resena"
 identifier = "sX6ElJHStx"
 weight = 5
 
 [[main]]
-name = "Lecturas"
+name = "Comentando"
 pageRef = "lecturas"
 identifier = "gfPb40Z0yU"
 weight = 4
@@ -33,7 +33,7 @@ weight = 2
 
 [[main]]
 name = "Principio"
-pageRef = "content"
+pageRef = "/"
 identifier = "zAHnVjLgxc"
 weight = 1
 

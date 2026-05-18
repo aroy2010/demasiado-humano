@@ -1,0 +1,288 @@
+<div class="banner-hero-contenedor">
+    <div class="banner-hero-frame">
+        <img src="/images/camino_futuro.png" alt="Encabezado del Blog">
+    </div>
+</div>
+
+<style>
+    /* 1. Neutralizar los espacios gigantes nativos de Blowfish (Gaps de 227px y 245px) */
+    main>div,
+    main>section,
+    .relative.flex {
+        min-height: auto !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    /* 2. Estructura y centrado del Banner Panorámico */
+    .banner-hero-contenedor {
+        width: 100%;
+        max-width: 1200px;
+        margin: 1rem auto !important;
+        padding: 0 1.5rem;
+        display: block;
+    }
+
+    .banner-hero-frame {
+        width: 100%;
+        height: 380px;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        background-color: #f3f4f6;
+    }
+
+    .banner-hero-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* 3. Nombre del blog en Versalitas (Small-caps), más grande y distinguido */
+    .navbar a[href="/"],
+    .nav-brand,
+    a.text-2xl.font-bold,
+    [id="nav-brand"],
+    .navbar-brand {
+        font-variant: small-caps !important;
+        text-transform: lowercase !important;
+        /* Optimiza el renderizado de versalitas */
+        font-size: 1.6rem !important;
+        color: #1e3a8a !important;
+        /* Azul elegante */
+        font-weight: 700 !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .dark .navbar a[href="/"],
+    .dark .nav-brand,
+    .dark a.text-2xl.font-bold {
+        color: #f59e0b !important;
+        /* Ámbar/Dorado en modo oscuro */
+    }
+
+    /* 4. Forzar la aparición del botón de Modo Claro/Oscuro */
+    #theme-toggle,
+    #theme-toggle-mobile,
+    .theme-toggle,
+    button[title*="theme"],
+    button[id*="theme"] {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    #theme-toggle svg,
+    #theme-toggle-mobile svg {
+        display: block !important;
+        width: 1.4rem !important;
+        height: 1.4rem !important;
+        color: currentColor !important;
+    }
+
+    /* 5. Línea divisoria sutil debajo del menú superior */
+    header,
+    .navbar {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .dark header,
+    .dark .navbar {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    }
+
+    /* 6. Forzar las tarjetas de posts en 3 columnas proporcionales y centradas */
+    @media (min-width: 1024px) {
+
+        main .grid,
+        .homepage-recent-posts,
+        main div.grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            gap: 2rem !important;
+            width: 100% !important;
+            max-width: 1200px !important;
+            margin: 2rem auto !important;
+        }
+    }
+
+    /* 7. Estética de las tarjetas */
+    article,
+    .card {
+        border: 1px solid rgba(0, 0, 0, 0.04) !important;
+        border-radius: 14px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+        padding: 1.5rem !important;
+        background-color: #ffffff !important;
+        transition: transform 0.2s ease !important;
+    }
+
+    .dark article,
+    .dark .card {
+        background-color: #1e293b !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
+    article:hover,
+    .card:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    article h2,
+    article h2 a {
+        color: #1e3a8a !important;
+        font-family: Georgia, serif !important;
+    }
+
+    .dark article h2,
+    .dark article h2 a {
+        color: #60a5fa !important;
+    }
+</style>
+<div class="banner-hero-contenedor">
+    <div class="banner-hero-frame">
+        <img src="/images/camino_futuro.png" alt="Encabezado del Blog">
+    </div>
+</div>
+
+<style>
+    /* 1. Neutralizar los espacios gigantes nativos de Blowfish (Gaps de 227px y 245px) */
+    main>div,
+    main>section,
+    .relative.flex {
+        min-height: auto !important;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    /* 2. Estructura y centrado del Banner Panorámico */
+    .banner-hero-contenedor {
+        width: 100%;
+        max-width: 1200px;
+        margin: 1rem auto !important;
+        padding: 0 1.5rem;
+        display: block;
+    }
+
+    .banner-hero-frame {
+        width: 100%;
+        height: 380px;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        background-color: #f3f4f6;
+    }
+
+    .banner-hero-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* 3. Nombre del blog en Versalitas (Small-caps), más grande y distinguido */
+    .navbar a[href="/"],
+    .nav-brand,
+    a.text-2xl.font-bold,
+    [id="nav-brand"],
+    .navbar-brand {
+        font-variant: small-caps !important;
+        text-transform: lowercase !important;
+        /* Optimiza el renderizado de versalitas */
+        font-size: 1.6rem !important;
+        color: #1e3a8a !important;
+        /* Azul elegante */
+        font-weight: 700 !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .dark .navbar a[href="/"],
+    .dark .nav-brand,
+    .dark a.text-2xl.font-bold {
+        color: #f59e0b !important;
+        /* Ámbar/Dorado en modo oscuro */
+    }
+
+    /* 4. Forzar la aparición del botón de Modo Claro/Oscuro */
+    #theme-toggle,
+    #theme-toggle-mobile,
+    .theme-toggle,
+    button[title*="theme"],
+    button[id*="theme"] {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    #theme-toggle svg,
+    #theme-toggle-mobile svg {
+        display: block !important;
+        width: 1.4rem !important;
+        height: 1.4rem !important;
+        color: currentColor !important;
+    }
+
+    /* 5. Línea divisoria sutil debajo del menú superior */
+    header,
+    .navbar {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .dark header,
+    .dark .navbar {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    }
+
+    /* 6. Forzar las tarjetas de posts en 3 columnas proporcionales y centradas */
+    @media (min-width: 1024px) {
+
+        main .grid,
+        .homepage-recent-posts,
+        main div.grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            gap: 2rem !important;
+            width: 100% !important;
+            max-width: 1200px !important;
+            margin: 2rem auto !important;
+        }
+    }
+
+    /* 7. Estética de las tarjetas */
+    article,
+    .card {
+        border: 1px solid rgba(0, 0, 0, 0.04) !important;
+        border-radius: 14px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+        padding: 1.5rem !important;
+        background-color: #ffffff !important;
+        transition: transform 0.2s ease !important;
+    }
+
+    .dark article,
+    .dark .card {
+        background-color: #1e293b !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    }
+
+    article:hover,
+    .card:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    article h2,
+    article h2 a {
+        color: #1e3a8a !important;
+        font-family: Georgia, serif !important;
+    }
+
+    .dark article h2,
+    .dark article h2 a {
+        color: #60a5fa !important;
+    }
+</style>

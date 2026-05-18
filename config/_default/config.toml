@@ -1,3 +1,7 @@
 baseURL = 'https://aroy1962.xyz/'
 title = 'AROY1962'
 theme = 'blowfish'
+defaultContentLanguage = 'es'
+languageCode = 'es'
+disableLanguages = ['en']
+summaryLength = 30

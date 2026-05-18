@@ -1,0 +1,141 @@
+/* 1. Estilo del nombre del blog en el menú superior */
+.navbar a[href="/"],
+.nav-brand,
+a.text-2xl.font-bold,
+[id="nav-brand"],
+.navbar-brand {
+  font-variant: small-caps !important;
+  text-transform: lowercase !important;
+  font-size: 1.6rem !important;
+  color: #1e3a8a !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+}
+
+.dark .navbar a[href="/"],
+.dark .nav-brand,
+.dark a.text-2xl.font-bold,
+.dark [id="nav-brand"],
+.dark .navbar-brand {
+  color: #f59e0b !important;
+}
+
+/* 2. Línea delgada y tenue en el borde inferior del menú superior */
+header,
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.dark header,
+.dark .navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+/* 3. Forzar visibilidad del botón de cambio de tema */
+#theme-toggle,
+#theme-toggle-mobile,
+.theme-toggle,
+button[title*="theme"],
+button[id*="theme"] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#theme-toggle svg,
+#theme-toggle-mobile svg {
+  display: block !important;
+  width: 1.4rem !important;
+  height: 1.4rem !important;
+  color: currentColor !important;
+}
+
+/* 4. Diseño estético de tarjetas (layout de posts) */
+@media (min-width: 1024px) {
+
+  main .grid,
+  .homepage-recent-posts {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 2rem !important;
+    justify-content: center !important;
+  }
+}
+
+article,
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+  padding: 1.5rem !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  background-color: var(--background-color, #ffffff);
+}
+
+article:hover,
+.card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 5. Estilos para los títulos de las tarjetas */
+article h2,
+article h3,
+.card-title {
+  color: #1e3a8a !important;
+  font-family: Georgia, serif !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.dark article h2,
+.dark article h3 {
+  color: #60a5fa !important;
+}
+
+#theme-toggle.hidden,
+#theme-toggle-mobile.hidden,
+.theme-toggle.hidden,
+.theme-toggle-button.hidden,
+button[title*="theme"].hidden,
+button[id*="theme"].hidden {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#theme-toggle[hidden],
+#theme-toggle-mobile[hidden],
+.theme-toggle[hidden],
+.theme-toggle-button[hidden],
+button[title*="theme"][hidden],
+button[id*="theme"][hidden] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#theme-toggle svg,
+#theme-toggle-mobile svg {
+  display: block !important;
+  width: 1.4rem !important;
+  height: 1.4rem !important;
+  color: currentColor !important;
+}
+
+/* 2. Forzar la aparición del icono de cambio de tema (Claro/Oscuro) */
+button#theme-toggle,
+button#theme-toggle-mobile,
+.theme-toggle,
+button[title*="theme"] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+button#theme-toggle svg,
+button#theme-toggle-mobile svg {
+  display: block !important;
+  width: 1.4rem !important;
+  height: 1.4rem !important;
+  color: currentColor !important;
+}

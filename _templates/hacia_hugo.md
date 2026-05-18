@@ -1,26 +1,33 @@
 <%*
-// 1. SELECCIÓN DE SECCIÓN (Branch Bundle)
+// 1. Selección de Sección
 const secciones = ["posts", "escritos_creativos", "lecturas", "resena", "acerca"];
 const seleccion = await tp.system.suggester(secciones, secciones);
-if (!seleccion) return; 
+if (!seleccion) return;
 
-// 2. CAPTURA DE METADATOS EXTENDIDOS
+// 2. Captura de Datos
 const titulo = await tp.system.prompt("Título de la obra");
 const descripcion = await tp.system.prompt("Descripción breve (SEO)");
 const etiquetas = await tp.system.prompt("Etiquetas (separadas por coma)");
 const year = tp.date.now("YYYY");
 const month = tp.date.now("MM");
+const fechaIso = tp.date.now("YYYY-MM-DDTHH:mm:ssZ");
 
-// 3. GENERACIÓN DE SLUG TÉCNICO (Data Linkage)
+// 3. Generación de Slug Sanetizado
 const slug = tp.date.now("YYYY-MM") + "-" + titulo.toLowerCase()
     .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .replace(/\s+/g, '-')
     .replace(/[^\w-]/g, '');
 
-// 4. PROTOCOLO DE CREACIÓN RECURSIVA DE CARPETAS
 const pathBase = `${seleccion}/${year}/${month}/${slug}`;
-const niveles = [seleccion, `${seleccion}/${year}`, `${seleccion}/${year}/${month}`, pathBase];
+const rutaFinal = `${pathBase}/index.md`;
 
+// 4. PROTOCOLO DE CREACIÓN RECURSIVA CON MANEJO DE ERRORES
+if (await app.vault.adapter.exists(rutaFinal)) {
+    new Notice("⚠️ Error: La carpeta o el post ya existen. Elige otro título o borra el anterior.");
+    return;
+}
+
+const niveles = [seleccion, `${seleccion}/${year}`, `${seleccion}/${year}/${month}`, pathBase];
 for (const nivel of niveles) {
     if (!(await app.vault.adapter.exists(nivel))) {
         await app.vault.createFolder(nivel);
@@ -28,22 +35,18 @@ for (const nivel of niveles) {
 }
 
 // 5. MOVIMIENTO AL LEAF BUNDLE
-const rutaFinal = `${pathBase}/index.md`;
 await tp.file.move(rutaFinal);
 %>---
 title: "<% titulo %>"
-date: <% tp.date.now("YYYY-MM-DDTHH:mm:ssZ") %>
+date: <% fechaIso %>
 description: "<% descripcion %>"
 summary: "<% descripcion %>"
 categories: ["<% seleccion %>"]
 tags: [<% etiquetas %>]
-# Configuración Blowfish (Afinamiento estético)
+# Configuración Blowfish
 showReadingTime: true
 showWordCount: true
-showTableOfContents: true
-# Imagen destacada (Debe estar en la misma carpeta del post)
-featureImage: "feature.jpg" 
-featureImageAlt: "Descripción visual de la obra"
+featureImage: "feature.jpg"
 draft: true
 ---
 
@@ -52,6 +55,3 @@ draft: true
 > *Iniciando registro narrativo en la sección: <% seleccion.toUpperCase() %>*
 
 ---
-
-## 🖋️ Desarrollo
-Empieza aquí tu escritura creativa...
