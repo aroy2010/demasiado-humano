@@ -1,7 +1,21 @@
 replyByEmail = false
 
 [article]
-sharingLinks = []
+showAuthor = true
+sharingLinks = [ ]
+showTaxonomies = true
+showCategories = true
+showTags = true
 
 [footer]
 showAppearanceSwitcher = true
+
+[homepage]
+showRecent = true
+cardView = true
+cardViewScreenWidth = true
+layout = "hero"
+homepageImage = "camino_futuro.png"
+showMoreLink = true
+showMoreLinkDest = "showMoreLinkDest"
+disableHeroImageFilter = true

@@ -34,6 +34,28 @@ body {
     font-family: "Lato", sans-serif;
     font-size: 18px;
     line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Main site shell width: header, hero, footer container */
+body.max-w-7xl {
+    max-width: 1200px !important;
+}
+
+body.max-w-7xl.px-6.sm\:px-14.md\:px-24.lg\:px-32 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.prose,
+.prose p,
+.prose li,
+.prose blockquote,
+.prose figcaption {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--sn-text);
 }
 
 a,
@@ -74,6 +96,8 @@ h3,
     color: var(--sn-h3);
     font-size: 20px;
     line-height: 1.4;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--sn-h3) 35%, transparent);
 }
 
 /* Top navigation (Blowfish default header) */
@@ -92,13 +116,13 @@ nav.flex.items-center.gap-x-5.h-12 {
     font-variant-caps: all-small-caps !important;
     text-transform: none !important;
     letter-spacing: 0.4px;
-    color: var(--sn-accent) !important;
+    color: #6B7F4C !important;
     font-size: 1.2rem !important;
     font-weight: 700;
 }
 
 .dark .main-menu>a.text-base.font-medium.truncate.min-w-0.shrink {
-    color: var(--sn-accent) !important;
+    color: #6B7F4C !important;
 }
 
 /* Reduce top menu items by ~1.5pt */
@@ -144,7 +168,7 @@ article.max-w-full.prose.dark\:prose-invert section.prose {
 /* Recent posts grid: 3 columns, centered, same max width as hero (max-w-7xl) */
 main>section>div.relative.w-screen {
     width: 100% !important;
-    max-width: 80rem !important;
+    max-width: 1200px !important;
     margin: 0 auto !important;
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
@@ -194,7 +218,8 @@ main>section>div.relative.w-screen>section.w-full.grid {
 }
 
 div.fixed.inset-x-0.z-100 {
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #F4F7F0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 #menu-blur {
@@ -212,22 +237,23 @@ div.fixed.inset-x-0.z-100 {
     transition: height 0.3s ease;
 }
 
-div.fixed.inset-x-0.z-100.header-condensed {
-    background-color: var(--sn-header-scrolled-bg);
+div.fixed.inset-x-0.z-100.header-scrolled {
+    background-color: rgba(244, 247, 240, 0.85);
     box-shadow: 0 2px 12px rgba(58, 58, 51, 0.08);
+    transform: translateY(-1px) scale(0.995);
 }
 
-div.fixed.inset-x-0.z-100.header-condensed #menu-blur {
+div.fixed.inset-x-0.z-100.header-scrolled #menu-blur {
     opacity: 1 !important;
-    background: var(--sn-header-scrolled-bg) !important;
+    background: rgba(244, 247, 240, 0.85) !important;
 }
 
-div.fixed.inset-x-0.z-100.header-condensed .main-menu {
+div.fixed.inset-x-0.z-100.header-scrolled .main-menu {
     min-height: var(--header-height-collapsed);
 }
 
-div.fixed.inset-x-0.z-100.header-condensed .main-menu nav.flex.items-center.gap-x-5.h-12,
-div.fixed.inset-x-0.z-100.header-condensed .main-menu .flex.items-center.h-14.gap-4 {
+div.fixed.inset-x-0.z-100.header-scrolled .main-menu nav.flex.items-center.gap-x-5.h-12,
+div.fixed.inset-x-0.z-100.header-scrolled .main-menu .flex.items-center.h-14.gap-4 {
     height: var(--header-height-collapsed) !important;
 }
 
@@ -280,6 +306,7 @@ html.dark :where(h2, .prose h2),
 html.dark :where(h3, .prose h3),
 [data-theme="dark"] :where(h3, .prose h3) {
     color: var(--sn-h3) !important;
+    border-bottom-color: color-mix(in srgb, var(--sn-h3) 45%, transparent) !important;
 }
 
 html.dark .prose,
@@ -287,34 +314,179 @@ html.dark .prose,
     color: var(--sn-text) !important;
 }
 
-/* Single post content spacing and surface */
-#single_header,
+/* Single post article body: centered 800px with generous spacing */
 .article-content.max-w-prose {
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-
-.article-content.max-w-prose {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 2rem;
+    width: 100%;
+    max-width: 800px !important;
+    margin: 2rem auto !important;
+    padding: 2rem 50px;
     background: var(--sn-bg) !important;
     border: 1px solid color-mix(in srgb, var(--sn-border) 85%, transparent);
     box-shadow: 0 4px 14px rgba(58, 58, 51, 0.05);
     border-radius: 0.75rem;
 }
 
-@media (max-width: 1024px) {
+.article-content.max-w-prose {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
-    #single_header,
+section.flex.flex-col.max-w-full.mt-0.prose.dark\:prose-invert.lg\:flex-row>div.min-w-0.min-h-0.max-w-fit {
+    width: 100%;
+    max-width: 100% !important;
+}
+
+@media (max-width: 1024px) {
     .article-content.max-w-prose {
-        margin-left: 1.25rem;
-        margin-right: 1.25rem;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
 
     .article-content.max-w-prose {
         margin-top: 1.25rem;
         margin-bottom: 1.25rem;
-        padding: 1.25rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
     }
+}
+
+/* Adjustment 1: align single post title block with 800px article content box */
+#single_header.max-w-prose {
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Adjustment 2: 15px gap between top menu line and homepage hero */
+main#main-content>article.max-w-full.prose.dark\:prose-invert {
+    margin-top: 15px;
+}
+
+/* Adjustment 3: homepage recent section title color */
+main#main-content>section>h2.mt-8.text-2xl.font-extrabold.mb-10 {
+    color: #8B5E5E !important;
+}
+
+html.dark main#main-content>section>h2.mt-8.text-2xl.font-extrabold.mb-10,
+[data-theme="dark"] main#main-content>section>h2.mt-8.text-2xl.font-extrabold.mb-10 {
+    color: #E0B060 !important;
+}
+
+/* Adjustment 4: homepage "show more" button style */
+main#main-content>section>div.mt-10.flex.justify-center button {
+    color: #7A2E2E !important;
+    border-color: #7A2E2E !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    font-size: calc(1rem - 0.25rem) !important;
+}
+
+html.dark main#main-content>section>div.mt-10.flex.justify-center button,
+[data-theme="dark"] main#main-content>section>div.mt-10.flex.justify-center button {
+    color: #E08E6E !important;
+    border-color: #E08E6E !important;
+    font-style: italic !important;
+}
+
+/* Adjustment 5: center single post previous/next navigation container */
+footer.pt-8.max-w-prose.print\:hidden {
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+@media (max-width: 1024px) {
+
+    #single_header.max-w-prose,
+    footer.pt-8.max-w-prose.print\:hidden {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
+/* Taxonomy badges: categories and tags (single + cards) */
+.text-sm.text-neutral-500.dark\:text-neutral-400 a[href*="/categories/"] span.rounded-md,
+.text-base.text-neutral-500.dark\:text-neutral-400.print\:hidden a[href*="/categories/"] span.rounded-md {
+    background: #F4F7F0;
+    border-color: #6B7F4C;
+    color: #6B7F4C;
+}
+
+.text-sm.text-neutral-500.dark\:text-neutral-400 a[href*="/tags/"] span.rounded-md,
+.text-base.text-neutral-500.dark\:text-neutral-400.print\:hidden a[href*="/tags/"] span.rounded-md {
+    background: #F4F7F0;
+    border-color: #8B5E5E;
+    color: #8B5E5E;
+}
+
+/* ===== Section Identities: Naturaleza Serena ===== */
+
+/* posts */
+.section-posts a,
+.section-posts .prose a {
+    color: #6B7F4C;
+}
+
+.section-posts header h1 {
+    border-top: 3px solid #6B7F4C;
+    padding-top: 1.5rem;
+}
+
+/* lecturas */
+.section-lecturas a,
+.section-lecturas .prose a {
+    color: #B05E3A;
+}
+
+.section-lecturas .article-link--card,
+.section-lecturas .article-link--simple {
+    border-left: 3px solid #B05E3A;
+    padding-left: 1.5rem;
+}
+
+.section-lecturas header h1::before {
+    content: "📚 ";
+}
+
+/* escritos_creativos */
+.section-escritos_creativos a,
+.section-escritos_creativos .prose a {
+    color: #7A5E8B;
+}
+
+.section-escritos_creativos .article-link__summary {
+    font-style: italic;
+}
+
+.section-escritos_creativos header h1::before {
+    content: "✒️ ";
+}
+
+/* Dark mode readable variants */
+html.dark .section-lecturas a,
+[data-theme="dark"] .section-lecturas a,
+html.dark .section-lecturas .prose a,
+[data-theme="dark"] .section-lecturas .prose a {
+    color: #E08E6E;
+}
+
+html.dark .section-escritos_creativos a,
+[data-theme="dark"] .section-escritos_creativos a,
+html.dark .section-escritos_creativos .prose a,
+[data-theme="dark"] .section-escritos_creativos .prose a {
+    color: #B0A0C5;
+}
+
+html.dark .section-lecturas .article-link--card,
+html.dark .section-lecturas .article-link--simple,
+[data-theme="dark"] .section-lecturas .article-link--card,
+[data-theme="dark"] .section-lecturas .article-link--simple {
+    border-left-color: #E08E6E;
 }

@@ -9,8 +9,11 @@ description = "Reflexiones, meditaciones, inquisiciones y disquisiciones sobre e
 copyright = "Derechos reservados: Adriel Olórtegui Yzú - 2026"
 displayName = "ES"
 isoCode = "es"
-dateFormat = "2 de January de 2006"
+dateFormat = ":date_long"
 
 [params.author]
-name = "Adriel Olórtegui Yzú"
-headline = ""
+name = "Adriel"
+email = ""
+link = ""
+links = []
+headline = "Reflexiones humanistas y literarias"

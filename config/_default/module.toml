@@ -13,8 +13,3 @@
 [[mounts]]
     source = "data"
     target = "data"
-
-[hugo]
-  [hugo.module]
-    [[hugo.module.imports]]
-      path = "github.com/nunocoracao/blowfish/v2"

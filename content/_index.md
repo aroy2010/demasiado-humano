@@ -1,5 +1,8 @@
-title: "AROY1962: Blog de Adriel"
-description: "Reflexiones - Disquisiciones - Inquisiciones"
+---
+title: "El Blog de Adriel"
+description: "Reflexiones personales con enfoque humanista y literario"
 layout: "hero"
+homepageImage: "images/camino_futuro.png"
+---
 
-> Si la historia es un círculo, pensemos si el círculo es más grande para cobijar a todos o por el contrario, estamos excluyendo una parte de nosotros.
+> Cada palabra es un paso en el camino.

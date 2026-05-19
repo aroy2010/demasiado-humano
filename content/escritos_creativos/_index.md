@@ -1,9 +1,24 @@
 ---
-title: "Escritura Creativa"
-description: "Pensamiento hecho palabra. Lo que rescaté de mis lecturas y lo que ellas me inspiraron"
-draft: false
+title: "Escritos Creativos"
+description: "Prosa poetica, cuentos breves y otros vuelos de la imaginacion."
+layout: "list"
+cascade:
+	showDate: true
+	draft: true
+	showReadingTime: false
 ---
 
-Mis reflexiones para todos.
+# Escritos Creativos: laboratorio de asombro
 
-"No es bueno matar al mensajero, su mensaje puede ser para tu circunstancia"
+Este rincon guarda textos en proceso, imagenes narradas y pequenas piezas de riesgo intimo.
+La imaginacion aqui no busca perfeccion: busca verdad emocional.
+
+> A veces la ficcion dice con mas exactitud aquello que no cabe en el discurso.
+
+## 📖 Lo que encontraras aqui
+
+- Prosa poetica y fragmentos de atmosfera.
+- Cuentos breves y escenas de exploracion.
+- Borradores vivos en busca de forma final.
+
+Explora, lee con calma y sientete libre de compartir tus propias reflexiones.

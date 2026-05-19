@@ -1,10 +1,13 @@
 [[main]]
-none = "none"
-
-[[main]]
 name = "Acerca de"
 pageRef = "acerca"
 identifier = "wsrCnwTNk3"
+weight = 7
+
+[[main]]
+name = "Explorar"
+pageRef = "categories"
+identifier = "temas_taxonomia"
 weight = 6
 
 [[main]]
@@ -38,4 +41,3 @@ identifier = "zAHnVjLgxc"
 weight = 1
 
 [[footer]]
-none = "none"
