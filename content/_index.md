@@ -1,8 +1,10 @@
 ---
 title: "El Blog de Adriel"
-description: "Reflexiones personales con enfoque humanista y literario"
+description: "La lectura es el viaje de los que no pueden tomar el tren."
 layout: "hero"
 homepageImage: "images/camino_futuro.png"
 ---
 
-> Cada palabra es un paso en el camino.
+> "La lectura es el viaje de los que no pueden tomar el tren."
+>
+> Francis de Croisset

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
 :root {
@@ -110,19 +111,26 @@ nav.flex.items-center.gap-x-5.h-12 {
     border-bottom: 1px solid rgba(107, 127, 76, 0.25);
 }
 
-/* Site title in small-caps (not uppercase transform) */
+/* Site title in small-caps (override Tailwind/Blowfish uppercase utilities) */
+header .main-menu>a.text-base.font-medium.truncate.min-w-0.shrink,
 .main-menu>a.text-base.font-medium.truncate.min-w-0.shrink {
-    font-variant: small-caps !important;
-    font-variant-caps: all-small-caps !important;
-    text-transform: none !important;
+    font-family: "Alegreya SC", serif !important;
     letter-spacing: 0.4px;
     color: #6B7F4C !important;
     font-size: 1.2rem !important;
     font-weight: 700;
 }
 
+.dark header .main-menu>a.text-base.font-medium.truncate.min-w-0.shrink,
 .dark .main-menu>a.text-base.font-medium.truncate.min-w-0.shrink {
     color: #6B7F4C !important;
+}
+
+/* Mobile menu title/primary label in matching small-caps */
+#mobile-menu-toggle~div nav.mx-auto.max-w-md.space-y-6 .px-2>a>span.text-2xl.font-bold.tracking-tight {
+    font-variant: small-caps !important;
+    font-variant-caps: small-caps !important;
+    text-transform: none !important;
 }
 
 /* Reduce top menu items by ~1.5pt */
@@ -163,6 +171,11 @@ article.max-w-full.prose.dark\:prose-invert h1,
 article.max-w-full.prose.dark\:prose-invert h2,
 article.max-w-full.prose.dark\:prose-invert section.prose {
     font-family: "Lato", sans-serif;
+}
+
+/* Homepage hero: hide only the large H1 title, keep quote/content visible */
+main#main-content>article.max-w-full.prose.dark\:prose-invert .relative.px-4.py-16.sm\:px-6.sm\:py-24.lg\:py-32.lg\:px-8.flex.flex-col.items-center.justify-center.text-center>h1.mb-2.text-4xl.font-extrabold {
+    display: none !important;
 }
 
 /* Recent posts grid: 3 columns, centered, same max width as hero (max-w-7xl) */

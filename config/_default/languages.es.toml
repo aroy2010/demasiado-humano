@@ -12,8 +12,8 @@ isoCode = "es"
 dateFormat = ":date_long"
 
 [params.author]
-name = "Adriel"
+name = ""
 email = ""
 link = ""
 links = []
-headline = "Reflexiones humanistas y literarias"
+headline = ""
