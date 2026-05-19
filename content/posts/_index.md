@@ -5,9 +5,9 @@ layout: "list"
 groupByYear: true
 sortOrder: "desc"
 cascade:
-	showDate: true
-	showReadingTime: true
-	showAuthor: true
+  showDate: true
+  showReadingTime: true
+  showAuthor: true
 ---
 
 # Reflexiones para habitar el mundo

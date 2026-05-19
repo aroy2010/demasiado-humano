@@ -5,10 +5,10 @@ layout: "list"
 sortBy: "date"
 sortOrder: "desc"
 cascade:
-	showDate: true
-	showAuthor: true
-	showReadingTime: true
-	featureImage: "images/libros-default.webp"
+  showDate: true
+  showAuthor: true
+  showReadingTime: true
+  featureImage: "images/libros-default.webp"
 ---
 
 # Lecturas que dejan huella

@@ -3,9 +3,9 @@ title: "Escritos Creativos"
 description: "Prosa poetica, cuentos breves y otros vuelos de la imaginacion."
 layout: "list"
 cascade:
-	showDate: true
-	draft: true
-	showReadingTime: false
+  showDate: true
+  draft: true
+  showReadingTime: false
 ---
 
 # Escritos Creativos: laboratorio de asombro
